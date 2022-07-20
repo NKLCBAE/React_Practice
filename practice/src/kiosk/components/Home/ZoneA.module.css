@@ -1,0 +1,22 @@
+.image{
+  position: relative;
+  width: 700px;
+  height: 350px;
+}
+.seat{
+    position: absolute;
+    font-size: 20pt;
+    width: 68px;
+    height: 68px;
+    background-color: aquamarine;
+  }
+.seat:hover{
+    background-color: aqua;
+}
+.noseat{
+  position: absolute;
+  font-size: 12pt;
+  width: 68px;
+  height: 68px;
+  background-color: tomato;
+}

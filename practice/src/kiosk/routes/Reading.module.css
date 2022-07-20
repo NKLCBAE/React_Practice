@@ -1,0 +1,8 @@
+.cardReading{
+    position: relative;
+    color:blue;
+    margin: 100px;
+    border: 1px solid black;
+    text-align: center;
+    height: 300px;
+}
