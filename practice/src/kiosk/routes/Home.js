@@ -10,6 +10,7 @@ function Home() {
   //   { id: "01", top: "178px", left: "290px", holder: null },
   //   { id: "02", top: "178px", left: "365px", holder: null },
   // ]));
+  // localStorage.setItem('userLogin',JSON.stringify([]));
   
   const [zone, setZone] = useState("A");
   const setA = () => {

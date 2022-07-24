@@ -1,0 +1,134 @@
+
+  .tabletHomeMain{
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 1080px;
+    height: 720px;
+    border: 1px solid rgb(0, 190, 130);
+    flex-direction: column;
+  }
+
+  .tabletPPicArea .pPicInnerArea {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: rgb(0, 190, 130);
+    margin: 50px 0 0 0;
+  }
+
+  .pPicInnerArea img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    /* margin: 50px 0 0 50px; */
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+  }
+  .tabletHomeMain .userName {
+    font-size: 50px;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin: 50px 0 0 0;
+  }
+  .tabletHomeMain .userInfo {
+    color: #1b1b1b;
+    font-weight: 400;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 25px;
+  }
+  .tabletLinkButtons {
+    /* align-items: baseline; */
+    margin: 50px 0 0 0;
+    /* background-attachment: fixed; */
+    display: flex;
+    /* background-color: rgb(0, 190, 130); */
+    align-items: center;
+  }
+  .tabletLinkButtons button {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid rgb(0, 190, 130);
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    margin: 50px 0 0 50px;
+    /* text-decoration: none; */
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .tabletLinkButtons .tabletLinkIconLink {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* .tabletLinkIconArea button:hover::before {
+    content: "go";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: baseline;
+    background: rgb(0, 190, 130);
+    color: rgb(255, 255, 255);
+  } */
+
+  .selectStatus {
+    appearance: none;
+    background-color: white;
+    height: 70px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 0px 50px;
+    /* border: solid 3px rgb(0, 190, 130); */
+    cursor: pointer;
+    text-align: center;
+    /* color: rgb(205, 0, 0); */
+    font-size: 25px;
+  }
+  
+  .selectYourStatus select{
+    /* border: solid 3px rgb(0, 190, 130); */
+    cursor: pointer;
+    width: 300px;
+    /* -moz-appearance: none; */
+    outline: solid 1px rgb(0, 190, 130);
+    
+    color: #1b1b1b;
+  }
+  
+  .selectYourStatus option{
+    margin-top: 10px;
+    background-color: rgb(235, 250, 245);
+    padding: 10px 20px 10px 20px;
+    box-shadow: none;
+    border-radius: 10px;
+    line-height: 250px;
+    width: 500px;
+  }
+
+  .selectYourStatus select::-ms-expand{
+    display: none;
+  }
+
+  .selectStatus::after{
+    color: rgb(3, 108, 140);
+    /* cursor: pointer; */
+  }
+  
+  .selectStatus:hover::after{
+    color: rgb(98, 0, 255);
+    border: solid 2px rgb(98, 0, 255);
+    /* cursor: pointer; */
+  }

@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import styles from "./Reading.module.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 function Reading() {
-  const [name,setName] = useState();
   const zone = useLocation().state.zone;
   const seatNo = useLocation().state.seatNo;
-  const onChange = (event) => {
-    setName(event.target.value);
+  const users = JSON.parse(localStorage.getItem('userLogin'));
+  const navigate = useNavigate()
+  const onClick = () => {
+      const name = users[Math.floor(Math.random() * users.length)].name;
+      console.log(name);
+      navigate('../success', { state: { zone: `${zone}`, seatNo: `${seatNo}`, name: name } })
   }
   return (
     <div>
@@ -25,14 +29,11 @@ function Reading() {
       <Link to={`/login`} state={{ zone: `${zone}`, seatNo: `${seatNo}` }}>
         <button> 로그인</button>
       </Link>
-      <Link to={`/join`} state={{ zone: `${zone}`, seatNo: `${seatNo}` }}>
+      <Link to={`/signup`} state={{ zone: `${zone}`, seatNo: `${seatNo}` }}>
         <button>회원 가입</button>
       </Link>
-      <br/>
-      <input onChange={onChange}></input>
-      <Link to={`/success`} state={{ zone: `${zone}`, seatNo: `${seatNo}`, holder:`${name}` }}>
-        <button>인식 성공</button>
-      </Link>
+      <br />
+      <button onClick={onClick}>랜덤 카드 인식</button>
     </div>
   );
 }

@@ -2,29 +2,28 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-function Success() {
+function Success(props) {
   const zone = useLocation().state.zone;
   const seatNo = useLocation().state.seatNo;
-  const holder = useLocation().state.holder;
+  const name = useLocation().state.name;
   const seats = JSON.parse(localStorage.getItem('seats'));
-  const jam = '[{"id":"01","top":"178px","left":"290px","holder":null},{"id":"02","top":"178px","left":"365px","holder":"bae"}]';
-  async function check(){
+  // const jam = '[{"id":"01","top":"178px","left":"290px","holder":null},{"id":"02","top":"178px","left":"365px","holder":"bae"}]';
+  function check(){
   for (const i in seats) {
     if (seats[i].id === seatNo) {
-      seats[i].holder = await holder;
-      console.log(seats);
+      seats[i].holder = name;
       localStorage.setItem('seats', JSON.stringify(seats));
     }
   }
 }
-localStorage.setItem('seats',JSON.stringify(jam));
+// localStorage.setItem('seats',JSON.stringify(jam));
 check();
 
 
   return (
     <div>
       <h1>
-        {holder}님께 {zone}구역 {seatNo}번 좌석이 배정되었습니다.
+        {name}님께 {zone}구역 {seatNo}번 좌석이 배정되었습니다.
       </h1>
       <meta httpEquiv="refresh" content="5; url=http://localhost:3000/" />
     </div>
